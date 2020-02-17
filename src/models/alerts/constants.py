@@ -1,8 +1,10 @@
+import os
+
 __author__ = 'jslvtr'
 
 
-URL = "https://api.mailgun.net/v3/<>.mailgun.org/messages"
-API_KEY = "key-<>"
-FROM = "Mailgun Sandbox <postmaster@<>.mailgun.org>"
+URL = os.environ.get('URL')
+API_KEY = os.environ.get('API_KEY')
+FROM = os.environ.get('FROM')
 ALERT_TIMEOUT = 10
 COLLECTION = "alerts"
